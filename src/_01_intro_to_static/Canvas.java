@@ -55,8 +55,10 @@ public class Canvas {
         frame.pack();
     }
 
-    public void addCircle(Circle circle) {
-        circles.add(circle);
+    public void addCircle(Circle circle1) {
+    	System.out.println("circle radius = " + circle1.radius);
+        System.out.println("circle color = " + circle1.color);
+    	circles.add(circle1);
 
         // Must place after adding new circle
         // no size - 1 to number starting from 1
