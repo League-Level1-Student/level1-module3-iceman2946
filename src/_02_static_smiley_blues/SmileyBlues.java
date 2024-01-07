@@ -21,9 +21,12 @@ public class SmileyBlues {
 		// Run it again; are your Smileys all yellow now? Also try changing them to red or green!
 
 		// 5. Make three Smiley objects and add them to your panel
-		panel.add(new Smiley());
-		panel.add(new Smiley());
-		panel.add(new Smiley());
+		Smiley smiley= new Smiley();
+		panel.add(smiley);
+		Smiley smiley1= new Smiley();
+		panel.add(smiley1);
+		Smiley smiley2= new Smiley();
+		panel.add(smiley2);
 			
 		// 6. Pack your frame
 		frame.pack();
