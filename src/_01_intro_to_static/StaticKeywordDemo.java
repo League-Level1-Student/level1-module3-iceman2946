@@ -60,7 +60,7 @@ import java.awt.Color;
  *    member variables inside the static addCircles() method.
  */
 public class StaticKeywordDemo {
-    Canvas canvas;
+    static Canvas canvas;
     
     StaticKeywordDemo() {
         canvas = new Canvas();
