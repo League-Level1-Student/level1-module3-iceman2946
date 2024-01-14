@@ -31,6 +31,6 @@ public class SmileyBlues {
 		// 6. Pack your frame
 		frame.pack();
 		// 7. RUN THE PROGRAM and make sure you see three blue Smileys!
-		 Smiley.setColor(Smiley.YELLOW);
+		 
 	}
 }
