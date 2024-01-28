@@ -14,13 +14,14 @@ public class Frogger extends PApplet {
 
     @Override
     public void setup() {
-    	
+    	Car car= new Car(x,y,20,40);
+    	car.display();
     }
 
     @Override
     public void draw() {
-    	background(112,154,79);
-    	ellipse(50,300,40,40);
+    	fill(112,154,79);
+    	ellipse(x,y,40,40);
     }
     static public void main(String[] args) {
         PApplet.main(Frogger.class.getName());
@@ -45,23 +46,20 @@ public class Frogger extends PApplet {
                 x--;
             }
         }
+        exitCanvas();
     }
     public void exitCanvas() {
-    	if(x<=0) {
-    		x=50;
-    		y=300;
-    }
-    	else if(y<=0) {
-    		x=50;
-    		y=300;
+    	if(x>WIDTH) {
+    		x=WIDTH;
     	}
-    	else if(x>600) {
-    		x=50;
-    		y=300;
+    	if(x<0) {
+    		x=0;
     	}
-    	else if(y>400) {
-    		x=50;
-    		y=300;
+    	if(y>HEIGHT) {
+    		y=HEIGHT;
+    	}
+    	if(y<0) {
+    		y=0;
     	}
     }
 }
