@@ -7,6 +7,8 @@ public class Frogger extends PApplet {
     static final int HEIGHT = 400;
     int x;
     int y;
+    Car car1;
+    Car car2;
     @Override
     public void settings() {
         size(WIDTH, HEIGHT);
@@ -14,14 +16,16 @@ public class Frogger extends PApplet {
 
     @Override
     public void setup() {
-    	Car car= new Car(x,y,20,40);
-    	car.display();
+    	car1= new Car(0,200,50,20,this);
+    	car2= new Car(0,400,50,20,this);
     }
 
     @Override
     public void draw() {
     	fill(112,154,79);
     	ellipse(x,y,40,40);
+    	car1.display();
+    	car2.display();
     }
     static public void main(String[] args) {
         PApplet.main(Frogger.class.getName());
