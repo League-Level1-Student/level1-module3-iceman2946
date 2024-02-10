@@ -24,8 +24,11 @@ public class Frogger extends PApplet {
     public void draw() {
     	fill(112,154,79);
     	ellipse(x,y,40,40);
+    	car1.moveLeft();
     	car1.display();
+    	car2.moveRight();
     	car2.display();
+    	car1.intersects(car1);
     }
     static public void main(String[] args) {
         PApplet.main(Frogger.class.getName());

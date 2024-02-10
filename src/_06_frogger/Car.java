@@ -20,4 +20,38 @@ public class Car  {
 	    sketch.fill(0,255,0);
 	    sketch.rect(x , y,  size, 50);
 	  }
+	void moveLeft() {
+		speed--;
+		x--;
+		if(x<0) {
+			x=Frogger.WIDTH; 
+		}
+	}
+	void moveRight() {
+		speed++;
+		x++;
+		if(x>Frogger.WIDTH) {
+			x=0;
+		}
+	}
+	int getX() {
+		return x;
+	}
+	int getY() {
+		return y;
+	}
+	int getSize() {
+		return size;
+		
+	}
+	boolean intersects(Car car) {
+		 if ((frogY > car.getY() && frogY < car.getY()+50) &&
+		                (frogX > car.getX() && frogX < car.getX()+car.getSize())) {
+		   return true;
+		  }
+		 else  {
+		  return false;
+		 }
+
+	}
 }
